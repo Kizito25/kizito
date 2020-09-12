@@ -4,6 +4,7 @@ const router = express.Router();
 router.get("/", (req, res, next) => {
   res.render("frontend/blog", {
     pageTitle: "Blog",
+    classGroup: "blog",
   });
 });
 

@@ -4,10 +4,10 @@
 <%- include('../partials/header.ejs') %>
 <!-- Main Header end -->
 <main>
-  <div class="main__divider"></div>
-  <div class="main__container">
+  <div class="<%=classGroup%>__divider"></div>
+  <div class="<%=classGroup%>__container">
     <!-- Main Profile Card -->
-    <div class="main__profile_card">
+    <div class="<%=classGroup%>__profile_card">
       <img
         class="profile_card__img"
         src="img/profile-img.png"
@@ -23,9 +23,9 @@
     </div>
   </div>
   <!-- Main Profile Card end -->
-  <div class="main__profile-footer">
+  <div class="<%=classGroup%>__profile-footer">
     <!-- Social Icons  start-->
-    <div class="main__profile-footer_social">
+    <div class="<%=classGroup%>__profile-footer_social">
       <ul>
         <li>Facebook</li>
         <li>LinkedIn</li>
@@ -35,8 +35,14 @@
     </div>
     <!-- Social Icons end -->
     <!-- Contact Icon start -->
-    <div id="main__profile_contact" class="main_profile_contact">
-      <div id="main__profile_contact_panel" class="main__profile_contact_panel">
+    <div
+      id="<%=classGroup%>__profile_contact"
+      class="<%=classGroup%>_profile_contact"
+    >
+      <div
+        id="<%=classGroup%>__profile_contact_panel"
+        class="<%=classGroup%>__profile_contact_panel"
+      >
         <span class="close" id="close"> &times;</span>
         <form method="POST" action="" id="messenger" class="messenger">
           <label for="name">First Name</label>
@@ -75,7 +81,7 @@
         </div>
       </div>
       <i
-        id="main_profile_contact_btn"
+        id="<%=classGroup%>_profile_contact_btn"
         class="fa fa-paper-plane open-message-panel"
       ></i>
       <h4 class="open-message-panel-text">Drop a message</h4>
