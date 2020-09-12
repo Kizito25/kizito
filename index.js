@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const path = require("path");
+
 // console.log() shorthand
 const cl = (value) => console.log(value);
 
@@ -20,6 +21,9 @@ const cl = (value) => console.log(value);
 // use ejs-locals for all ejs templates:
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
+
+// Public Directory
+app.use(express.static(path.join(__dirname, "public")));
 
 // Routes
 const indexRoute = require("./routes/indexRoute");
