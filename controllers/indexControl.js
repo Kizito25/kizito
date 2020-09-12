@@ -1,5 +1,6 @@
-exports.homepage = (req, res, next) => {
+exports.getHomepage = (req, res, next) => {
   res.render("frontend/home", {
-    pageTitle: "Ihugba Kizito",
+    pageTitle: "Home",
+    classGroup: "main",
   });
 };

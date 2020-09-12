@@ -1,11 +1,7 @@
 const express = require("express");
 const router = express.Router();
+const talkControl = require("../controllers/talkControl");
 
-router.get("/", (req, res, next) => {
-  res.render("frontend/talk", {
-    pageTitle: "Talks",
-    classGroup: "talk",
-  });
-});
+router.get("/", talkControl.getTalkPage);
 
 module.exports = router;

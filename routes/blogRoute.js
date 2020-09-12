@@ -1,11 +1,7 @@
 const express = require("express");
 const router = express.Router();
+const blogControl = require("../controllers/blogControl");
 
-router.get("/", (req, res, next) => {
-  res.render("frontend/blog", {
-    pageTitle: "Blog",
-    classGroup: "blog",
-  });
-});
+router.get("/", blogControl.getBlogPage);
 
 module.exports = router;
