@@ -8,7 +8,7 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-family: "Poppins", sans-serif;
 }
-body {
+#main__body {
   overflow: hidden;
   background: whitesmoke;
 }
@@ -21,16 +21,8 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background-color: rgba(0, 250, 154, 0.486);
 }
-#project__body {
-  overflow-y: visible;
-}
-#blog__body {
-  overflow-y: visible;
-}
-#talk__body {
-  overflow-y: visible;
-}
-main {
+
+.main__main {
   background-color: whitesmoke;
   height: 100vh;
 }

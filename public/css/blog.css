@@ -1,4 +1,14 @@
 /* ************Blogs*************** */
+
+#blog__body {
+  overflow-y: visible;
+  scroll-behavior: smooth;
+  background-color: whitesmoke;
+}
+.blog__main {
+  background-color: whitesmoke;
+  height: 100%;
+}
 /* Prooject Header */
 .blog__header {
   display: flex;
@@ -13,9 +23,9 @@
   font-size: 1.6rem;
 }
 #blog__header_logo_svg {
-padding:0px 70px;
-margin: -10px;
-margin-left: -80px;
+  padding: 0px 70px;
+  margin: -10px;
+  margin-left: -80px;
 }
 .blog__divider {
   height: 0.2rem;

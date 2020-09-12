@@ -1,4 +1,13 @@
 /* ************PROJECTS*************** */
+#project__body {
+  overflow-y: visible;
+  scroll-behavior: smooth;
+  background-color: whitesmoke;
+}
+.project__main {
+  background-color: whitesmoke;
+  height: 100%;
+}
 /* Prooject Header */
 .project__header {
   display: flex;
@@ -14,9 +23,9 @@
 }
 
 #project__header_logo_svg {
-padding:0px 70px;
-margin: -10px;
-margin-left: -80px;
+  padding: 0px 70px;
+  margin: -10px;
+  margin-left: -80px;
 }
 .project__divider {
   height: 0.2rem;
@@ -164,10 +173,11 @@ margin-left: -80px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   grid-template-rows: repeat(auto-fit, 1fr);
-  grid-template-areas: "item1 item1 item2"
-  "item3 item4 item5"
-  "item6 item7 item7"
-  "item8 . .";
+  grid-template-areas:
+    "item1 item1 item2"
+    "item3 item4 item5"
+    "item6 item7 item7"
+    "item8 . .";
   grid-gap: 1rem;
   position: absolute;
   right: 40px;
@@ -193,35 +203,35 @@ margin-left: -80px;
   cursor: pointer;
   object-fit: stretch;
 }
-.item-1 {
+.project__item-1 {
   grid-area: item1;
-  }
-.item-1 img{
+}
+.project__item-1 img {
   width: 100%;
   object-fit: cover;
-  }
-  .item-2{
-    grid-area: item2
-  }
-  .item-3{
-    grid-area: item3;
-  }
-  .item-4{
-    grid-area: item4;
-  }
-  .item-5{
-    grid-area: item5;
-  }
-  .item-6{
-    grid-area: item6
-  }
-.item-7{
-grid-area: item7
 }
-.item-7 img{
-width:100%;
-object-fit: cover;
+.project__item-2 {
+  grid-area: item2;
 }
-.item-8{
-  grid-area: item8
+.project__item-3 {
+  grid-area: item3;
+}
+.project__item-4 {
+  grid-area: item4;
+}
+.project__item-5 {
+  grid-area: item5;
+}
+.project__item-6 {
+  grid-area: item6;
+}
+.project__item-7 {
+  grid-area: item7;
+}
+.project__item-7 img {
+  width: 100%;
+  object-fit: cover;
+}
+.project__item-8 {
+  grid-area: item8;
 }

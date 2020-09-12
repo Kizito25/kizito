@@ -1,92 +1,93 @@
 <%- include('../partials/head.ejs') %>
-
-<!-- Main Header  start-->
-<%- include('../partials/header.ejs') %>
-<!-- Main Header end -->
-<main>
-  <div class="<%=classGroup%>__divider"></div>
-  <div class="<%=classGroup%>__container">
-    <!-- Main Profile Card -->
-    <div class="<%=classGroup%>__profile_card">
-      <img
-        class="profile_card__img"
-        src="img/profile-img.png"
-        alt="Prfile Image"
-        srcset=""
-        height="200"
-        width="200"
-      />
-      <div class="profile_card__body">
-        <h1 class="profile_card__name">Ihugba Kizito</h1>
-        <h3 class="profile_card__stack">Backend Developer</h3>
-      </div>
-    </div>
-  </div>
-  <!-- Main Profile Card end -->
-  <div class="<%=classGroup%>__profile-footer">
-    <!-- Social Icons  start-->
-    <div class="<%=classGroup%>__profile-footer_social">
-      <ul>
-        <li>Facebook</li>
-        <li>LinkedIn</li>
-        <li>GitHub</li>
-        <li>Twitter</li>
-      </ul>
-    </div>
-    <!-- Social Icons end -->
-    <!-- Contact Icon start -->
-    <div
-      id="<%=classGroup%>__profile_contact"
-      class="<%=classGroup%>_profile_contact"
-    >
-      <div
-        id="<%=classGroup%>__profile_contact_panel"
-        class="<%=classGroup%>__profile_contact_panel"
-      >
-        <span class="close" id="close"> &times;</span>
-        <form method="POST" action="" id="messenger" class="messenger">
-          <label for="name">First Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            class="input name"
-            placeholder="First Name"
-          />
-          <label for="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            class="input email"
-            placeholder="Email"
-          />
-          <label for="message">Write Message</label>
-          <textarea
-            fixed
-            id="message"
-            class="massage"
-            col="10"
-            rows="20"
-            placeholder="Write Message"
-          ></textarea>
-          <button type="submit" id="send-message" class="send-message">
-            Send <i id="message-icon" class="fa fa-paper-plane"></i>
-          </button>
-        </form>
-        <div class="footer__credit">
-          <strong class="footer__credit_text"
-            >made with <i class="fa fa-heart"></i> by Kizito Ihugba</strong
-          >
+<body id="main__body">
+  <!-- Main Header  start-->
+  <%- include('../partials/header.ejs') %>
+  <!-- Main Header end -->
+  <main class="main__main">
+    <div class="<%=classGroup%>__divider"></div>
+    <div class="<%=classGroup%>__container">
+      <!-- Main Profile Card -->
+      <div class="<%=classGroup%>__profile_card">
+        <img
+          class="profile_card__img"
+          src="img/profile-img.png"
+          alt="Prfile Image"
+          srcset=""
+          height="200"
+          width="200"
+        />
+        <div class="profile_card__body">
+          <h1 class="profile_card__name">Ihugba Kizito</h1>
+          <h3 class="profile_card__stack">Backend Developer</h3>
         </div>
       </div>
-      <i
-        id="<%=classGroup%>_profile_contact_btn"
-        class="fa fa-paper-plane open-message-panel"
-      ></i>
-      <h4 class="open-message-panel-text">Drop a message</h4>
     </div>
-    <!-- Contact Icon end -->
-  </div>
-</main>
-<%- include('../partials/tail.ejs') %>
+    <!-- Main Profile Card end -->
+    <div class="<%=classGroup%>__profile-footer">
+      <!-- Social Icons  start-->
+      <div class="<%=classGroup%>__profile-footer_social">
+        <ul>
+          <li>Facebook</li>
+          <li>LinkedIn</li>
+          <li>GitHub</li>
+          <li>Twitter</li>
+        </ul>
+      </div>
+      <!-- Social Icons end -->
+      <!-- Contact Icon start -->
+      <div
+        id="<%=classGroup%>__profile_contact"
+        class="<%=classGroup%>_profile_contact"
+      >
+        <div
+          id="<%=classGroup%>__profile_contact_panel"
+          class="<%=classGroup%>__profile_contact_panel"
+        >
+          <span class="close" id="close"> &times;</span>
+          <form method="POST" action="" id="messenger" class="messenger">
+            <label for="name">First Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="input name"
+              placeholder="First Name"
+            />
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="input email"
+              placeholder="Email"
+            />
+            <label for="message">Write Message</label>
+            <textarea
+              fixed
+              id="message"
+              class="massage"
+              col="10"
+              rows="20"
+              placeholder="Write Message"
+            ></textarea>
+            <button type="submit" id="send-message" class="send-message">
+              Send <i id="message-icon" class="fa fa-paper-plane"></i>
+            </button>
+          </form>
+          <div class="footer__credit">
+            <strong class="footer__credit_text"
+              >made with <i class="fa fa-heart"></i> by Kizito Ihugba</strong
+            >
+          </div>
+        </div>
+        <i
+          id="<%=classGroup%>_profile_contact_btn"
+          class="fa fa-paper-plane open-message-panel"
+        ></i>
+        <h4 class="open-message-panel-text">Drop a message</h4>
+      </div>
+      <!-- Contact Icon end -->
+    </div>
+  </main>
+  <%- include('../partials/tail.ejs') %>
+</body>
