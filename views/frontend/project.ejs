@@ -128,54 +128,8 @@
       <!-- Social Icons end -->
       <!-- Contact Icon start -->
       <div id="main__profile_contact" class="main_profile_contact">
-        <div
-          id="main__profile_contact_panel"
-          class="main__profile_contact_panel"
-        >
-          <span class="close" id="close"> &times;</span>
-          <form method="POST" action="" id="messenger" class="messenger">
-            <label for="name">First Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              class="input name"
-              placeholder="First Name"
-            />
-            <label for="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              class="input email"
-              placeholder="Email"
-            />
-            <label for="message">Write Message</label>
-            <textarea
-              fixed
-              id="message"
-              class="massage"
-              col="10"
-              rows="20"
-              placeholder="Write Message"
-            ></textarea>
-            <button type="submit" id="send-message" class="send-message">
-              Send <i id="message-icon" class="fa fa-paper-plane"></i>
-            </button>
-          </form>
-          <div class="footer__credit">
-            <strong class="footer__credit_text"
-              >made with <i class="fa fa-heart"></i> by Kizito Ihugba</strong
-            >
-          </div>
-        </div>
-        <i
-          id="main_profile_contact_btn"
-          class="fa fa-paper-plane open-message-panel"
-        ></i>
-        <h4 class="open-message-panel-text">Drop a message</h4>
+        <%- include('../layouts/messenger.ejs') %>
       </div>
-      <!-- Contact Icon end -->
     </div>
   </main>
 </body>
