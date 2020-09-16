@@ -2,11 +2,11 @@
 const cl = require("../utils/consoleLog");
 const nodemailer = require("nodemailer");
 
-// Message Template
-const message = require("../utils/msgTemplate");
-
 // Message Sender
 exports.sendMessage = (req, res, next) => {
+  // Message Template
+  const message = require("../utils/msgTemplate");
+
   const hostName = req.hostname;
   const currentURL = req.originalUrl;
   const port = process.env.PORT || 3000;
