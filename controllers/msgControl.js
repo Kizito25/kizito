@@ -9,17 +9,40 @@ exports.sendMessage = (req, res, next) => {
   const port = process.env.PORT || 3000;
   const fullURL = hostName + ":" + port + currentURL;
   cl.log(fullURL);
+
+  // New Email Body
   const newMessage = `
   <!DOCTYPE html>
   <html>
+  <head>
+  <style>
+  body: {
+    background-color: red;
+  }
+  .logo-link {
+    text-decoration: none;
+    color: red;
+    font-family: Poppins, "sans-serif";
+  }
+  </style>
+  </head>
+  <body>
+  <header class="navbar">
+
+   <div class="logo">
+   <h1><a class="logo-link" href="kizito.dev">Logo</a></h1>
+   </div> 
+
+  </header>
+  <div class="content">
+  <h3> Message: <strong> ${req.body.message} </strong> </h3>
+  <p> Sender </p>
   <ul>
   <li> Name: ${req.body.name}</li>
   <li> Email: ${req.body.email} </li>
-  <li> Message: ${req.body.message} </li>
   </ul>
- <h3> Message: </h3>
- <strong> ${req.body.message} </strong>
-
+  </div>
+  </body>
   </html>
     `;
 
@@ -48,17 +71,19 @@ exports.sendMessage = (req, res, next) => {
 
   let mailOptions = {
     //sender address
-    from: ' "My Portfolio" <admin@maxfixdelivery.com>',
+    from: ' "My Portfolio" <devkizito@gmail.com>',
 
     //list of recievers
     to: "devkizito@gmail.com",
 
+    headers: {
+      "x-priority": "1",
+      "x-msmail-priority": "High",
+      importance: "high",
+    },
+
     //subject line
-    subject: `New Message from: ${req.body.fullname}`,
-
-    //Plain Text Body
-
-    //text: 'Hello',
+    subject: `New Message from: ${req.body.name}`,
 
     //html Body
     html: newMessage,
