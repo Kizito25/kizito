@@ -10,15 +10,17 @@ exports.sendMessage = (req, res, next) => {
   const fullURL = hostName + ":" + port + currentURL;
   cl.log(fullURL);
   const newMessage = `
-    <p> You have  a new contact request </p>
-    <h3> Contact details </h3>
-    <ul>
-        <li> Name: ${req.body.name}</li>
-        <li> Email: ${req.body.email} </li>
-        <li> Message: ${req.body.message} </li>
-    </ul>
-    <h3> Message: </h3>
-    <p><strong> ${req.body.message} </strong></p>
+  <!DOCTYPE html>
+  <html>
+  <ul>
+  <li> Name: ${req.body.name}</li>
+  <li> Email: ${req.body.email} </li>
+  <li> Message: ${req.body.message} </li>
+  </ul>
+ <h3> Message: </h3>
+ <strong> ${req.body.message} </strong>
+
+  </html>
     `;
 
   // Google Transport
@@ -47,12 +49,22 @@ exports.sendMessage = (req, res, next) => {
   const transport = nodemailer.createTransport({
     host: process.env.NODE_MAILER_HOST,
     port: 587,
+    secure: true,
     auth: {
       user: process.env.NODE_MAILER_EMAIL,
       pass: process.env.NODE_MAILER_PASSWORD,
     },
-    allowUnauthorized: true,
+    //allowUnauthorized: true,
   });
+
+  // const transport = nodemailer.createTransport({
+  //   host: "localhost",
+  //   port: 1025,
+  //   auth: {
+  //     user: "project.1",
+  //     pass: "secret.1",
+  //   },
+  // });
 
   let mailOptions = {
     //sender address
