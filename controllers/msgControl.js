@@ -24,38 +24,18 @@ exports.sendMessage = (req, res, next) => {
     `;
 
   // Google Transport
-  //   const transport = nodemailer.createTransport({
-  //     service: "gmail",
-  //     auth: {
-  //       user: "dev@gmail.com",
-  //       pass: process.env.EMAIL_PASS,
-  //     },
-  //     tls: {
-  //       rejectUnauthorized: false,
-  //     },
-  //   });
-
-  // Etheareal Transport
-  //   const transport = nodemailer.createTransport({
-  //     host: "smtp.ethereal.email",
-  //     port: 587,
-  //     auth: {
-  //       user: "myra11@ethereal.email",
-  //       pass: "H4fEHeaxYA7RteYR9Z",
-  //     },
-  //   });
-
-  // Personal Host
   const transport = nodemailer.createTransport({
-    host: process.env.NODE_MAILER_HOST,
-    port: 587,
-    secure: true,
+    service: "gmail",
     auth: {
-      user: process.env.NODE_MAILER_EMAIL,
-      pass: process.env.NODE_MAILER_PASSWORD,
+      user: process.env.EMAIL,
+      pass: process.env.PASSWORD,
     },
-    //allowUnauthorized: true,
+    tls: {
+      rejectUnauthorized: false,
+    },
   });
+
+  // DEBUG EMAIL
 
   // const transport = nodemailer.createTransport({
   //   host: "localhost",
