@@ -12,38 +12,12 @@ exports.sendMessage = (req, res, next) => {
 
   // New Email Body
   const newMessage = `
-  <!DOCTYPE html>
-  <html>
-  <head>
-  <style>
-  body: {
-    background-color: red;
-  }
-  .logo-link {
-    text-decoration: none;
-    color: red;
-    font-family: Poppins, "sans-serif";
-  }
-  </style>
-  </head>
-  <body>
-  <header class="navbar">
-
-   <div class="logo">
-   <h1><a class="logo-link" href="kizito.dev">Logo</a></h1>
-   </div> 
-
-  </header>
-  <div class="content">
-  <h3> Message: <strong> ${req.body.message} </strong> </h3>
+  <h4> Message: <strong> ${req.body.message} </strong> </h4>
   <p> Sender </p>
   <ul>
   <li> Name: ${req.body.name}</li>
   <li> Email: ${req.body.email} </li>
   </ul>
-  </div>
-  </body>
-  </html>
     `;
 
   // Google Transport

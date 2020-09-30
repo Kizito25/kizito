@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
+const cors = require("cors");
 const mongoose = require("mongoose");
 const path = require("path");
 const favicon = require("serve-favicon");
@@ -28,7 +29,9 @@ app.set("view engine", "ejs");
 // Public Directory
 app.use(express.static(path.join(__dirname, "public")));
 app.use(favicon(path.join(__dirname, "favicon.png")));
-// Bod parser
+app.use(cors());
+
+// Body parser
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
