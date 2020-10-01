@@ -19,66 +19,49 @@ const panelOpen = (mainContactButton.onclick = () => {
   mainMessagePanel.style.display = "block";
   mainContactButtonClass.style.display = "none";
   mainContactButtonClassText.style.display = "none";
-  //   const sendMessage = document.querySelector("#send-message");
-  //   sendMessage.onclick = (e) => {
-  //     e.preventDefault();
-  //     // cl("message sent");
 
-  //     // Ajax Form Submit
-  // };
+  //   Process Form Submission using Ajax JQuery
   $(document).ready(() => {
     $("#messenger").on("submit", (e) => {
       e.preventDefault();
-
-      var formData = {
-        name: $("input[name=name]").val(),
-        email: $("input[name=email]").val(),
-        message: $("textarea[name=message]").val(),
+      const data = () => {
+        return (formData = {
+          name: $("input[name=name]").val(),
+          email: $("input[name=email]").val(),
+          message: $("textarea[name=message]").val(),
+        });
       };
 
+      // Send AJAX post request using JQuery
       $.ajax({
         type: "POST",
-        crossDomain: true,
         headers: {
           accept: "application/json",
           "Access-Control-Allow-Origin": "*",
         },
         url: "/messenger",
-        data: formData,
         dataType: "json",
+        data: data(),
         encode: true,
-      })
-        // using the done promise callback
-        .done(function (data) {
-          // log data to the console so we can see
-          console.log(data);
-
-          // here we will handle errors and validation messages
-          if (!data.success) {
-            // handle errors for name ---------------
-            if (data.errors.name) {
-              $("#message-icon").removeClass("fa-paper-plane");
-              $("#message-icon").addClass("fa-ban");
-            }
-
-            // handle errors for email ---------------
-            if (data.errors.email) {
-              $("#message-icon").removeClass("fa-paper-plane");
-              $("#message-icon").addClass("fa-ban");
-            }
-
-            // handle errors for superhero alias ---------------
-            if (data.errors.message) {
-              $("#message-icon").removeClass("fa-paper-plane");
-              $("#message-icon").addClass("fa-ban");
-            }
-          } else {
-            // ALL GOOD! just show the success message!
-            $("#message-icon").removeClass("fa-paper-plane");
-            $("#message-icon").addClass("fa-check");
-            cl("Message sent!!!");
-          }
-        });
+      });
+      setTimeout(() => {
+        $("#message-icon").removeClass("fa-paper-plane");
+        $("#send-message").html("Sent");
+        $("#send-message").addClass("message-sent");
+        $("#send-message").append(
+          "<i id='message-icon' class='fas fa-check'></i>"
+        );
+        $("#name").val("");
+        $("#email").val("");
+        $("#message").val("");
+        setTimeout(() => {
+          $("#send-message").removeClass("message-sent");
+          $("#send-message").html("Send");
+          $("#send-message").append(
+            "<i id='message-icon' class='fa fa-paper-plane'></i>"
+          );
+        }, 3000);
+      }, 1200);
     });
   });
 });

@@ -71,7 +71,7 @@ exports.sendMessage = (req, res, next) => {
     console.log("Message sent", info.messageId);
 
     console.log("Preview Url: %s", nodemailer.getTestMessageUrl(info));
-    res.redirect(fullURL);
+    res.redirect("back");
   });
 };
 

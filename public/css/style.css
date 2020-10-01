@@ -172,6 +172,13 @@ body::-webkit-scrollbar-thumb {
   animation-name: showup;
   animation-duration: 1s;
 }
+@keyframes showup {
+  from {
+    bottom: -250px;
+    opacity: 0;
+  }
+  /* to { top: 350px; opacity: 1} */
+}
 
 .main__profile_contact_panel .close {
   position: absolute;
@@ -244,19 +251,28 @@ body::-webkit-scrollbar-thumb {
   font-weight: bold;
   margin: 0px 10px;
   background-color: none;
+  animation: rotateIcon 1s ease-in;
 }
 .fa-heart {
   color: black;
+}
+/* Message Sent  */
+.message-sent {
+  color: rgba(0, 250, 154, 0.932);
+}
+.message-sent i {
+  color: rgba(0, 250, 154, 0.932) !important;
+}
+@keyframes rotateIcon {
+  from {
+    bottom: -250px;
+    opacity: 0;
+  }
+
+  /* to { top: 350px; opacity: 1} */
 }
 
 .footer__credit {
   text-align: center;
   padding-top: 10px;
-}
-@keyframes showup {
-  from {
-    bottom: -250px;
-    opacity: 0;
-  }
-  /* to { top: 350px; opacity: 1} */
 }
