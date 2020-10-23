@@ -10,17 +10,20 @@ const favicon = require("serve-favicon");
 // console.log() shorthand
 const cl = require("./utils/consoleLog");
 
-// mongoose
-//   .connect(process.env.URI, {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true,
-//     useCreateIndex: true,
-//     useNewT,
-//   })
-//   .then((connected) => {
-//     const PORT = process.env.PORT || 3000;
-//     app.listen(PORT, () => cl(`server listening on port ${PORT}`));
-//   });
+// Connect to Database
+mongoose
+  .connect(process.env.MONGO_URI_LOCAL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+  })
+  .then((connected) => {
+    const PORT = process.env.PORT || 3000;
+    app.listen(PORT, () => cl.log(`server listening on port ${PORT}`));
+  })
+  .catch((err) => {
+    cl.log(err);
+  });
 
 // use ejs-locals for all ejs templates:
 app.set("views", path.join(__dirname, "views"));
@@ -61,7 +64,7 @@ app.use("/messenger", msgRoute);
 app.use((req, res, next) => {
   res.status(404).send("error 404! Page cannot be found");
 });
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => cl.log(`server listening on port ${PORT}`));
+// const PORT = process.env.PORT || 3000;
+// app.listen(PORT, () => cl.log(`server listening on port ${PORT}`));
 
 module.exports = app;
