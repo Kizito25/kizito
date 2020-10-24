@@ -70,13 +70,17 @@ const panelOpen = (mainContactButton.onclick = () => {
 // Mobile Menu Open
 const mobileHeader = document.querySelector(".mobile_header_nav");
 const hamburger = document.querySelector([".hamburger1", ".hamburger2"]);
+// const mobileNav = document.querySelector(".mobile_header_nav")
 const navOpen = (e) => {
   cl("navigation opened");
   if (mobileHeader.style.display == "none") {
     // Show Menu Items
+    mobileHeader.style.transiton = "4s";
+    mobileHeader.classList.add("open");
     mobileHeader.style.display = "block";
   } else {
     // Hide the Menu Items
+    mobileHeader.classList.remove("open");
     mobileHeader.style.display = "none";
   }
 };

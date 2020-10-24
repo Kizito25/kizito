@@ -74,16 +74,38 @@ body::-webkit-scrollbar-thumb {
   background-color: black;
   margin-bottom: 5px;
 }
-.mobile_header_nav {
-  display: none;
-  /* later to change to bloxk using javascript */
-}
 .main_header_nav {
   display: none;
 }
+.mobile_header_nav.open {
+  position: absolute;
+  background-color: whitesmoke;
+  top: 74px;
+  right: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  height: 100%;
+  z-index: 100000;
+  /* later to change to bloxk using javascript */
+}
 /* Main Header Navigation Items */
-.main__header_nav-list li {
+.mobile_header_nav.open ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.mobile_header_nav.open ul li {
   list-style: none;
-  margin: 0px 20px;
-  font-weight: 600;
+  margin: 15px 10px;
+  background-color: rgba(0, 250, 154, 0.486);
+  padding: 5px 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 20px;
+  color: black;
+  text-decoration: none;
+}
+.mobile_header_nav.open ul li a {
+  color: black;
+  text-decoration: none;
 }
