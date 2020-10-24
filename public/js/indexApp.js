@@ -75,7 +75,7 @@ const navOpen = (e) => {
   cl("navigation opened");
   if (mobileHeader.style.display == "none") {
     // Show Menu Items
-    mobileHeader.style.transiton = "4s";
+    mobileHeader.style.transition = "4s";
     mobileHeader.classList.add("open");
     mobileHeader.style.display = "block";
   } else {
