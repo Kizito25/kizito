@@ -56,6 +56,9 @@ body::-webkit-scrollbar-thumb {
   justify-content: space-evenly;
   margin: 0px 20px;
 }
+.mobile_header_nav {
+  display: none;
+}
 /* Main Header Navigation Items */
 .main__header_nav-list li {
   list-style: none;

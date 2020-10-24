@@ -1,5 +1,4 @@
 // Console.log() shorthand
-
 const cl = (value) => console.log(value);
 
 // Main Message Panel
@@ -65,3 +64,20 @@ const panelOpen = (mainContactButton.onclick = () => {
     });
   });
 });
+
+// Mobile Menu
+
+// Mobile Menu Open
+const mobileHeader = document.querySelector(".mobile_header_nav");
+const hamburger = document.querySelector([".hamburger1", ".hamburger2"]);
+const navOpen = (e) => {
+  cl("navigation opened");
+  if (mobileHeader.style.display == "none") {
+    // Show Menu Items
+    mobileHeader.style.display = "block";
+  } else {
+    // Hide the Menu Items
+    mobileHeader.style.display = "none";
+  }
+};
+hamburger.addEventListener("click", navOpen);
