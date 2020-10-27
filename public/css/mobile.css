@@ -67,6 +67,17 @@ body::-webkit-scrollbar-thumb {
   background-color: black;
   margin-bottom: 5px;
 }
+.hamburger1.toggled {
+  animation: hamburger1 1s linear;
+}
+@keyframes hamburger1 {
+  0% {
+    width: 30px;
+  }
+  50% {
+    width: 35px;
+  }
+}
 .hamburger2 {
   width: 25px;
   height: 6px;
@@ -74,10 +85,26 @@ body::-webkit-scrollbar-thumb {
   background-color: black;
   margin-bottom: 5px;
 }
+.hamburger2.toggled {
+  animation: hamburger2 1s linear;
+}
+@keyframes hamburger2 {
+  0% {
+    width: 25px;
+  }
+  50% {
+    width: 30px;
+  }
+}
 .main_header_nav {
   display: none;
 }
+.mobile_header_nav {
+  display: none;
+}
 .mobile_header_nav.open {
+  animation-name: dropdown;
+  animation-duration: 1s;
   position: absolute;
   background-color: whitesmoke;
   top: 74px;
@@ -87,9 +114,13 @@ body::-webkit-scrollbar-thumb {
   padding: 20px;
   height: 100%;
   z-index: 100000;
-  /* later to change to bloxk using javascript */
 }
-/* Main Header Navigation Items */
+@keyframes dropdown {
+  from {
+    top: 74px;
+    opacity: 0;
+  }
+}
 .mobile_header_nav.open ul {
   display: flex;
   flex-wrap: wrap;
@@ -108,4 +139,28 @@ body::-webkit-scrollbar-thumb {
 .mobile_header_nav.open ul li a {
   color: black;
   text-decoration: none;
+}
+.main__header_logo #main__header_logo_svg path:nth-child(6) {
+  fill: transparent;
+  stroke-width: 2;
+  stroke: rgb(10, 10, 10);
+  stroke-dasharray: 1050;
+  stroke-dashoffset: 1050;
+  animation: animate-kizito 10s linear infinite;
+}
+
+@keyframes animate-kizito {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  40% {
+    stroke-dashoffset: 400;
+  }
+  80% {
+    stroke-dashoffset: 800;
+  }
+  100% {
+    stroke-dashoffset: 1050;
+    fill: rgba(0, 250, 154, 0.486);
+  }
 }

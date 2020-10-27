@@ -279,3 +279,27 @@ body::-webkit-scrollbar-thumb {
   text-align: center;
   padding-top: 10px;
 }
+.main__header_logo #main__header_logo_svg path:nth-child(6) {
+  fill: transparent;
+  stroke-width: 2;
+  stroke: rgb(10, 10, 10);
+  stroke-dasharray: 1050;
+  stroke-dashoffset: 1050;
+  animation: animate-kizito 10s linear infinite;
+}
+
+@keyframes animate-kizito {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  40% {
+    stroke-dashoffset: 400;
+  }
+  80% {
+    stroke-dashoffset: 800;
+  }
+  100% {
+    stroke-dashoffset: 1050;
+    fill: rgba(0, 250, 154, 0.486);
+  }
+}

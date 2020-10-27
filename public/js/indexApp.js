@@ -69,19 +69,24 @@ const panelOpen = (mainContactButton.onclick = () => {
 
 // Mobile Menu Open
 const mobileHeader = document.querySelector(".mobile_header_nav");
-const hamburger = document.querySelector([".hamburger1", ".hamburger2"]);
-// const mobileNav = document.querySelector(".mobile_header_nav")
-const navOpen = (e) => {
-  cl("navigation opened");
-  if (mobileHeader.style.display == "none") {
+const hamburger = document.querySelector(".hamburger__container");
+const hamburger1 = document.querySelector(".hamburger1");
+const hamburger2 = document.querySelector(".hamburger2");
+let menuOpen = false;
+hamburger.onclick = (e) => {
+  if (!menuOpen) {
     // Show Menu Items
-    mobileHeader.style.transition = "4s";
+    hamburger1.classList.add("toggled");
+    hamburger2.classList.add("toggled");
     mobileHeader.classList.add("open");
     mobileHeader.style.display = "block";
+    menuOpen = true;
   } else {
     // Hide the Menu Items
+    hamburger1.classList.remove("toggled");
+    hamburger2.classList.remove("toggled");
     mobileHeader.classList.remove("open");
     mobileHeader.style.display = "none";
+    menuOpen = false;
   }
 };
-hamburger.addEventListener("click", navOpen);
