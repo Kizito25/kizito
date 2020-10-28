@@ -136,6 +136,7 @@ body::-webkit-scrollbar-thumb {
 .main__profile-footer_social li:hover {
   text-decoration: underline solid rgba(0, 250, 154, 0.486);
   cursor: pointer;
+  transition: all 0.5 linear;
 }
 .main_profile_contact {
   display: flex;
