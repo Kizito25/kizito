@@ -282,3 +282,12 @@ div.project__card {
   width: 100%;
   margin-bottom: 20px;
 }
+.project__details .project__authors,
+.project__details .project__tech {
+  font-size: 12px;
+}
+.project__item-1 img,
+.project__item-7 img {
+  width: 100%;
+  object-fit: unset;
+}
