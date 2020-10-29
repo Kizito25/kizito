@@ -118,7 +118,7 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  bottom: 50px;
+  margin-bottom: 0px;
 }
 .main__profile-footer_social {
   position: fixed;

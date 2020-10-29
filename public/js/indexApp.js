@@ -8,11 +8,18 @@ const mainContactButtonClassText = document.querySelector(
   ".open-message-panel-text"
 );
 const mainMessagePanel = document.querySelector("#main__profile_contact_panel");
+let isMobile = false;
 const mainCloseButton = document.querySelector("#close");
 const panelClose = (mainCloseButton.onclick = () => {
   mainMessagePanel.style.display = "none";
   mainContactButtonClass.style.display = "block";
-  mainContactButtonClassText.style.display = "block";
+  if (!isMobile) {
+    mainContactButtonClassText.style.display = "none";
+    isMobile = true;
+  } else {
+    mainContactButtonClassText.style.display = "block";
+    isMobile = false;
+  }
 });
 const panelOpen = (mainContactButton.onclick = () => {
   mainMessagePanel.style.display = "block";
