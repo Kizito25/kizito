@@ -390,12 +390,14 @@ div.blog__card {
 .blog__card_items {
   width: 100%;
   margin-bottom: 50px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.178);
 }
 .blog__card_items img {
+  filter: opacity(80%);
   width: 100%;
 }
 .blog__card_items:hover img {
-  filter: opacity(30%);
+  filter: opacity(50%);
   transition: all 0.5s ease-in;
 }
 div.blog__card_items {
@@ -541,10 +543,11 @@ div.talk__card {
   margin-bottom: 50px;
 }
 .talk__card_items img {
+  filter: opacity(80%);
   width: 100%;
 }
 .talk__card_items:hover img {
-  filter: opacity(30%);
+  filter: opacity(50%);
   transition: all 0.5s ease-in;
 }
 div.talk__card_items {
@@ -554,30 +557,22 @@ div.talk__card_items {
   margin-bottom: 100px;
 }
 .talk__details {
-  position: relative;
   display: flex;
-  margin-top: -120px;
-  align-self: baseline;
+  align-self: center;
   flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.452);
   border-radius: 8px;
   padding: 10px;
+  width: 100%;
   cursor: pointer;
 }
 
 .talk__details h2 {
   margin-top: 5px;
   font-size: 14px;
-  color: rgba(0, 250, 154, 0.932);
 }
 .talk__details p {
   margin-top: 5px;
   font-size: 12;
-  color: white;
-}
-.talk__details p:hover,
-.talk__details h2:hover {
-  color: black;
 }
 .talk__details .blog__authors,
 .talk__details .blog__tech {
@@ -587,11 +582,6 @@ div.talk__card_items {
 .talk__item-7 img {
   width: 100%;
   object-fit: unset;
-}
-.talk__details:hover {
-  color: black;
-  background-color: rgba(0, 0, 0, 0.199);
-  transition: all 0.5s ease-in;
 }
 /* Blog Footer */
 
@@ -629,4 +619,32 @@ div.talk__card_items {
 .talk__profile-footer_social ul li i:hover {
   background-color: rgba(0, 250, 154, 0.486);
   transition: all 0.52s linear;
+}
+/* Messenger */
+
+.main__profile_contact_panel {
+  position: fixed;
+  right: 0px;
+  left: 0px;
+  bottom: 0;
+  height: 400px;
+  width: 100%;
+  border-radius: 8px 8px 0px 0px;
+  background-image: radial-gradient(73% 147%, #eadfdf 59%, #ece2df 100%),
+    radial-gradient(
+      91% 146%,
+      rgba(255, 255, 255, 0.5) 47%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+  background-blend-mode: screen;
+  /* background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%); */
+  /* background-color: rgba(0, 250, 154, 0.932); */
+  /* background-color: whitesmoke; */
+  /* background-color: rgb(0, 250, 154); */
+  /* background-color: rgba(0, 250, 154, 0.186); */
+  display: none;
+  text-align: left;
+  padding: 20px;
+  animation-name: showup;
+  animation-duration: 1s;
 }
