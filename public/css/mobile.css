@@ -404,34 +404,16 @@ div.blog__card_items {
   padding: unset;
 }
 .blog__card_items:last-child {
-  margin-bottom: 100px;
+  margin-bottom: 140px;
 }
 .blog__details {
-  position: relative;
   display: flex;
-  margin-top: -120px;
-  align-self: baseline;
+  align-self: center;
   flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.452);
-  border-radius: 8px;
   padding: 10px;
   cursor: pointer;
 }
 
-.blog__details h2 {
-  margin-top: 5px;
-  font-size: 14px;
-  color: rgba(0, 250, 154, 0.932);
-}
-.blog__details p {
-  margin-top: 5px;
-  font-size: 12;
-  color: white;
-}
-.blog__details p:hover,
-.blog__details h2:hover {
-  color: black;
-}
 .blog__details .blog__authors,
 .blog__details .blog__tech {
   font-size: 10px;
@@ -442,8 +424,7 @@ div.blog__card_items {
   object-fit: unset;
 }
 .blog__details:hover {
-  color: black;
-  background-color: rgba(0, 0, 0, 0.199);
+  color: rgba(0, 0, 0, 0.747);
   transition: all 0.5s ease-in;
 }
 /* Blog Footer */
@@ -550,11 +531,9 @@ div.talk__card {
   filter: opacity(50%);
   transition: all 0.5s ease-in;
 }
-div.talk__card_items {
-  padding: unset;
-}
+
 .talk__card_items:last-child {
-  margin-bottom: 100px;
+  margin-bottom: 140px;
 }
 .talk__details {
   display: flex;
@@ -566,14 +545,6 @@ div.talk__card_items {
   cursor: pointer;
 }
 
-.talk__details h2 {
-  margin-top: 5px;
-  font-size: 14px;
-}
-.talk__details p {
-  margin-top: 5px;
-  font-size: 12;
-}
 .talk__details .blog__authors,
 .talk__details .blog__tech {
   font-size: 10px;
