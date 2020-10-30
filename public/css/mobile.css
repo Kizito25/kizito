@@ -632,8 +632,6 @@ div.talk__card_items {
   border-radius: 8px 8px 0px 0px;
   background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
   background-blend-mode: screen;
-
-  /* background-color: rgba(0, 250, 154, 0.186); */
   display: none;
   text-align: left;
   padding: 20px;
