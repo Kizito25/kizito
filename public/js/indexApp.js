@@ -4,27 +4,43 @@ const cl = (value) => console.log(value);
 // Lazy Loading Images
 
 // Loading all Images on the webpage
+
 const images = document.getElementsByTagName(["img"]);
+
 // Convert to array
+
 const imageArray = Array.prototype.slice.call(images);
 
 imageArray.slice(1).map((image) => {
   // Adding Progressivley Class Attributes
+
   image.classList.add("lozad");
 
   // Adding progressively Image Data Source
+
   image.setAttribute("data-src", "img/profile-img.png");
-  cl(image);
+
+  // lazy loads elements with default selector as ".lozad"
+
+  // Initialize library
+  lozad(image, {
+    load: (el) => {
+      el.src = el.dataset.src;
+      el.onload = function () {
+        el.classList.add("fade");
+        cl(el);
+      };
+    },
+  }).observe();
 });
-// lazy loads elements with default selector as ".lozad"
-const observer = lozad();
-observer.observe();
 // Main Message Panel
+
 const mainContactButton = document.querySelector("#main_profile_contact_btn");
 const mainContactButtonClass = document.querySelector(".open-message-panel");
 const mainContactButtonClassText = document.querySelector(
   ".open-message-panel-text"
 );
+
 const mainMessagePanel = document.querySelector("#main__profile_contact_panel");
 let isMobile = window.matchMedia("(max-width: 500px)");
 const mainCloseButton = document.querySelector("#close");
