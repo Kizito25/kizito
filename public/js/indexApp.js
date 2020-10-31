@@ -8,20 +8,16 @@ const mainContactButtonClassText = document.querySelector(
   ".open-message-panel-text"
 );
 const mainMessagePanel = document.querySelector("#main__profile_contact_panel");
-let isMobile = false;
+let isMobile = window.matchMedia("(max-width: 500px)");
 const mainCloseButton = document.querySelector("#close");
-const panelClose = (mainCloseButton.onclick = () => {
+const panelClose = (mainCloseButton.onclick = (e) => {
   mainMessagePanel.style.display = "none";
   mainContactButtonClass.style.display = "block";
-  if (!isMobile) {
-    mainContactButtonClassText.style.display = "none";
-    isMobile = true;
-  } else {
-    mainContactButtonClassText.style.display = "block";
-    isMobile = false;
-  }
+  !isMobile.matches
+    ? (mainContactButtonClassText.style.display = "block")
+    : (mainContactButtonClassText.style.display = "none");
 });
-const panelOpen = (mainContactButton.onclick = () => {
+const panelOpen = (mainContactButton.onclick = (e) => {
   mainMessagePanel.style.display = "block";
   mainContactButtonClass.style.display = "none";
   mainContactButtonClassText.style.display = "none";
