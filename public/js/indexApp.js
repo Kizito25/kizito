@@ -3,17 +3,27 @@ const cl = (value) => console.log(value);
 
 // Lazy Loading Images
 
-progressively.init({
-  delay: 50,
-  throttle: 300,
-  smBreakpoint: 600,
-  onLoad: function (elem) {
-    // elem = document.getElementsByTagName(["img"]);
-    cl(elem);
-  },
-  onLoadComplete: function () {
-    console.log("All images have finished loading!");
-  },
+// Loading all Images on the webpage
+const images = document.getElementsByTagName(["img"]);
+// Convert to array
+const imageArray = Array.prototype.slice.call(images);
+
+imageArray.slice(1).map((image) => {
+  image.classList.add("progressive__img");
+  image.classList.add("progressive--not-loaded");
+  cl(image);
+  progressively.init({
+    delay: 50,
+    throttle: 300,
+    smBreakpoint: 600,
+    onLoad: function (elem) {
+      elem = this.elem;
+      console.log(elem);
+    },
+    onLoadComplete: function () {
+      console.log("All images have finished loading!");
+    },
+  });
 });
 
 // Main Message Panel
