@@ -9,23 +9,16 @@ const images = document.getElementsByTagName(["img"]);
 const imageArray = Array.prototype.slice.call(images);
 
 imageArray.slice(1).map((image) => {
-  image.classList.add("progressive__img");
-  image.classList.add("progressive--not-loaded");
-  cl(image);
-  progressively.init({
-    delay: 50,
-    throttle: 300,
-    smBreakpoint: 600,
-    onLoad: function (elem) {
-      elem = this.elem;
-      console.log(elem);
-    },
-    onLoadComplete: function () {
-      console.log("All images have finished loading!");
-    },
-  });
-});
+  // Adding Progressivley Class Attributes
+  image.classList.add("lozad");
 
+  // Adding progressively Image Data Source
+  image.setAttribute("data-src", "img/profile-img.png");
+  cl(image);
+});
+// lazy loads elements with default selector as ".lozad"
+const observer = lozad();
+observer.observe();
 // Main Message Panel
 const mainContactButton = document.querySelector("#main_profile_contact_btn");
 const mainContactButtonClass = document.querySelector(".open-message-panel");
