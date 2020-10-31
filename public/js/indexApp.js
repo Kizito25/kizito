@@ -1,6 +1,21 @@
 // Console.log() shorthand
 const cl = (value) => console.log(value);
 
+// Lazy Loading Images
+
+progressively.init({
+  delay: 50,
+  throttle: 300,
+  smBreakpoint: 600,
+  onLoad: function (elem) {
+    // elem = document.getElementsByTagName(["img"]);
+    cl(elem);
+  },
+  onLoadComplete: function () {
+    console.log("All images have finished loading!");
+  },
+});
+
 // Main Message Panel
 const mainContactButton = document.querySelector("#main_profile_contact_btn");
 const mainContactButtonClass = document.querySelector(".open-message-panel");
