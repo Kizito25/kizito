@@ -12,16 +12,15 @@ const cl = require("./utils/consoleLog");
 
 // Connect to Database
 mongoose
-  .connect(process.env.MONGO_URI_REMOTE, {
+  .connect(process.env.MONGO_URI_LOCAL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
   })
   .then((connected) => {
     cl.log("Connected to Database");
-
-    // const PORT = process.env.PORT || 3000;
-    // app.listen(PORT, () => cl.log(`server listening on port ${PORT}`));
+    const PORT = process.env.PORT || 3000;
+    app.listen(PORT, () => cl.log(`server listening on port ${PORT}`));
   })
   .catch((err) => {
     cl.log(err);
@@ -66,7 +65,7 @@ app.use("/messenger", msgRoute);
 app.use((req, res, next) => {
   res.status(404).send("error 404! Page cannot be found");
 });
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => cl.log(`server listening on port ${PORT}`));
+// const PORT = process.env.PORT || 3000;
+// app.listen(PORT, () => cl.log(`server listening on port ${PORT}`));
 
 module.exports = app;

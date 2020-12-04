@@ -4,6 +4,6 @@ const projectControl = require("../controllers/projectControl");
 const upload = require("../controllers/imageUploadControl");
 
 router.get("/", projectControl.getProjectPage);
-router.post("/add", upload.single("cover-image"), projectControl.addProject);
+router.post("/add", upload.upload, projectControl.addProject);
 
 module.exports = router;

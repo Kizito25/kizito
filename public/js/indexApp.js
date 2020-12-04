@@ -28,7 +28,6 @@ imageArray.slice(1).map((image) => {
       el.src = el.dataset.src;
       el.onload = function () {
         el.classList.add("fade");
-        cl(el);
       };
     },
   }).observe();
@@ -127,3 +126,20 @@ hamburger.onclick = (e) => {
     menuOpen = false;
   }
 };
+
+const facebook = (document.querySelector(".fa-facebook").onclick = (e) => {
+  window.open("https://facebook.com/ihugba", "_blank");
+  // cl("Opened facebook");
+});
+const linkedin = (document.querySelector(".fa-linkedin").onclick = (e) => {
+  window.open("https://linkedin.com/in/kizito-ihugba-365891128", "_blank");
+  // cl("LinkedIn Opened");
+});
+const github = (document.querySelector(".fa-github").onclick = (e) => {
+  window.open("https://github.com/kizito25", "_blank");
+  // cl("Github Opened");
+});
+const twitter = (document.querySelector(".fa-twitter").onclick = (e) => {
+  window.open("https://twitter.com/@ihugba", "_blank");
+  // cl("Twitter Opened");
+});
