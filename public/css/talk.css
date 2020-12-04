@@ -115,6 +115,7 @@
   position: fixed;
   bottom: 50px;
   left: 20px;
+  width: 350px;
 }
 .talk__profile-footer_social ul {
   display: flex;
@@ -122,6 +123,7 @@
 .talk__profile-footer_social li {
   list-style: none;
   margin: 0 5px;
+  font-size: 0.9rem;
   font-weight: 600;
 }
 .talk__profile-footer_social li:hover {

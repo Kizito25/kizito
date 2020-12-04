@@ -123,7 +123,9 @@ body::-webkit-scrollbar-thumb {
 .main__profile-footer_social {
   position: fixed;
   bottom: 50px;
-  left: 180px;
+  /* Initially left: 180px */
+  left: 100px;
+  width: 350px;
 }
 .main__profile-footer_social ul {
   display: flex;
@@ -131,6 +133,7 @@ body::-webkit-scrollbar-thumb {
 .main__profile-footer_social li {
   list-style: none;
   margin: 0 5px;
+  font-size: 0.9rem;
   font-weight: 600;
 }
 .main__profile-footer_social li:hover {
@@ -318,4 +321,8 @@ body::-webkit-scrollbar-thumb {
   to {
     opacity: 1;
   }
+}
+.social__link {
+  color: black !important;
+  text-decoration: none !important;
 }

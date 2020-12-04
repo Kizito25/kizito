@@ -555,7 +555,9 @@ div.talk__card {
   object-fit: unset;
 }
 /* Blog Footer */
-
+.main__profile-footer_social {
+  left: 180px;
+}
 .talk__profile-footer {
   display: flex;
   align-items: center;
