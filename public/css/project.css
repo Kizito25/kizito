@@ -237,3 +237,17 @@
 .project__item-8 {
   grid-area: item8;
 }
+.project__tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+.project__tags-item {
+  font-weight: 300;
+  background-color: rgba(0, 250, 154, 0.486);
+  padding: 3px 8px;
+  margin: 3px;
+  border-radius: 15px;
+}
+.project__tags-item.nodeJs {
+  background-color: rgba(250, 0, 187, 0.589);
+}

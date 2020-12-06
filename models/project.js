@@ -7,12 +7,19 @@ const projectSchema = new mongoose.Schema({
   coverImage: {
     type: String,
   },
-  tags: {
-    type: [String],
-  },
-  authors: {
+  tags: [
+    {
+      type: String,
+    },
+  ],
+  description: {
     type: String,
   },
+  authors: [
+    {
+      type: String,
+    },
+  ],
   startDate: {
     type: String,
   },

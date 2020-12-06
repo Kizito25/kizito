@@ -12,7 +12,7 @@ const cl = require("./utils/consoleLog");
 
 // Connect to Database
 mongoose
-  .connect(process.env.MONGO_URI_REMOTE, {
+  .connect(process.env.MONGO_URI_LOCAL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,

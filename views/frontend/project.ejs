@@ -24,7 +24,40 @@
         </div>
       </div>
       <div class="<%=classGroup%>__card">
-        <div class="<%=classGroup%>__card_items <%=classGroup%>__item-1">
+
+        <!-- Starting dynamic rendering of projects -->
+      <% projects.forEach(project => { %>
+       
+        <% if (project.length < 1) { %>
+          <p>No Proects yet!</p>
+        <% } else { %>
+          <div class="<%=classGroup%>__card_items <%=classGroup%>__item-1">
+           <img
+            src="<%=project.coverImage%>"
+            data-src="<%=project.coverImage%> "
+            class="lozad"
+            width="260"
+            height="300"
+            alt=""
+            srcset=""
+            loading="lazy"
+          />
+          <div class="<%=classGroup%>__details">
+            <h2 class="<%=classGroup%>__title"><%= project.title %></h2>
+            <p class="<%=classGroup%>__description"><%= project.description %> </p>
+            <p class="<%=classGroup%>__authors">Authors: <%= project.authors %> </p>
+            <p class="<%=classGroup%>__tech project__tags"><%project.tags.forEach(tag => { %>
+                <span class="project__tags-item <%= tag %>"> <%= tag %> </span>
+            <% }) %>
+         </p>
+          </div>
+        </div>
+         <% } %>
+
+      <% }) %>
+
+
+        <!-- <div class="<%=classGroup%>__card_items <%=classGroup%>__item-1">
           <img
             src="img/profile-img-lowly.png"
             data-src="img/profile-img.png"
@@ -168,7 +201,7 @@
             <p class="project__tech">Tech</p>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
     <!-- Main Profile Card end -->
     <div class="<%=classGroup%>__profile-footer">

@@ -5,11 +5,21 @@ const Project = require("../models/project");
 const upload = require("../controllers/imageUploadControl");
 // console.log from Utils
 const cl = require("../utils/consoleLog");
-exports.getProjectPage = (req, res, next) => {
-  res.render("frontend/project", {
-    pageTitle: "Projects",
-    classGroup: "project",
-  });
+exports.getProjectPage = async (req, res, next) => {
+  const projects = await Project.find({});
+  try {
+    projects.map((project) => {
+      console.log(project.tags);
+    });
+    cl.log(typeof projects);
+    return res.render("frontend/project", {
+      pageTitle: "Projects",
+      classGroup: "project",
+      projects,
+    });
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 exports.get;
@@ -40,12 +50,21 @@ exports.addProject = async (req, res, next) => {
 
       // Create  Database
       const imageUrl = data.Location,
-        title = req.body.title;
+        title = req.body.title,
+        tags = req.body.tags,
+        description = req.body.description,
+        authors = req.body.authors;
 
-      const project = await Project.create({ title, coverImage: imageUrl });
+      const project = await Project.create({
+        title,
+        coverImage: imageUrl,
+        tags,
+        description,
+        authors,
+      });
       try {
         cl.log(project);
-        return res.status(201).send({ project, title, imageUrl });
+        return res.status(201).send({ project });
       } catch (error) {
         cl.log(error);
         return res.status(404).send(error);
