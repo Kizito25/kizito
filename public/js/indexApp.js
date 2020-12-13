@@ -140,6 +140,6 @@ const github = (document.querySelector(".fa-github").onclick = (e) => {
   // cl("Github Opened");
 });
 const twitter = (document.querySelector(".fa-twitter").onclick = (e) => {
-  window.open("https://twitter.com/@ihugba", "_blank");
+  window.open("https://twitter.com/ihugba", "_blank");
   // cl("Twitter Opened");
 });
