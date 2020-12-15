@@ -18,7 +18,7 @@ imageArray.slice(1).map((image) => {
 
   // Adding progressively Image Data Source
 
-  image.setAttribute("data-src", "img/profile-img.png");
+  // image.setAttribute("data-src", "img/profile-img.png");
 
   // lazy loads elements with default selector as ".lozad"
 
