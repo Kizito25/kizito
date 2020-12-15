@@ -26,10 +26,14 @@
       <div class="<%=classGroup%>__card">
 
         <!-- Starting dynamic rendering of projects -->
-      <% projects.forEach(project => { %>
+        <% projects.forEach(project => { %>
        
-        <% if (project.length < 1) { %>
-          <p>No Proects yet!</p>
+        <% if (!project) { %>
+           <div class="<%=classGroup%>__card_items <%=classGroup%>__item-2">
+          <div class="project__details">
+           <p>Projects Still Under Development!</p>
+          </div>
+        </div>
         <% } else { %>
           <div class="<%=classGroup%>__card_items <%=classGroup%>__item-1">
            <img
@@ -55,6 +59,7 @@
          <% } %>
 
       <% }) %>
+
 
 
         <!-- <div class="<%=classGroup%>__card_items <%=classGroup%>__item-1">
