@@ -251,3 +251,6 @@
 .project__tags-item.nodejs {
   background-color: rgba(250, 0, 187, 0.589);
 }
+.project__tags-item.backend {
+  background-color: rgba(115, 8, 255, 0.589);
+}
