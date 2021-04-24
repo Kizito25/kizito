@@ -119,20 +119,23 @@ body::-webkit-scrollbar-thumb {
   gap:10px;
   margin-top: 10px;
 }
+.profile-tools{
+font-size: 20px;
+}
 .fa-node-js{
-  color:rgba(0, 250, 154, 0.932)
+  color:#28a470
 }
 .fa-vuejs{
- color: aquamarine;
+ color: #35ce8d;
 }
 .fa-react{
-color:dodgerblue
+color:#0077b6
 }
-.linux{
- color: yellow
+.fa-linux{
+ color: #ffc300
 }
 .fa-github{
- 
+  color: #212529
 }
 .main__profile-footer {
   display: flex;
