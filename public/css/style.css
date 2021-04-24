@@ -114,6 +114,26 @@ body::-webkit-scrollbar-thumb {
 .profile_card__stack {
   margin-bottom: 5px;
 }
+.profile_card__tools{
+  display: flex;
+  gap:10px;
+  margin-top: 10px;
+}
+.fa-node-js{
+  color:rgba(0, 250, 154, 0.932)
+}
+.fa-vuejs{
+ color: aquamarine;
+}
+.fa-react{
+color:dodgerblue
+}
+.linux{
+ color: yellow
+}
+.fa-github{
+ 
+}
 .main__profile-footer {
   display: flex;
   justify-content: space-around;
