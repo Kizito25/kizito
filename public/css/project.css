@@ -57,24 +57,18 @@
 .project__container {
   height: 100%;
   width: 100%;
-  /* padding: 0 20px; */
-  display: flex;
-  flex-direction: column;
-  /* align-items: stretch; */
-  align-items: space-evenly;
-  justify-content: space-between;
 }
 
 /* Profile Card */
 
 .project__profile_card {
   display: flex;
-  flex-direction: row;
+  flex-direction: row; 
   align-items: center;
   justify-content: space-evenly;
   background-color: rgb(252, 248, 252);
   border-radius: 8px;
-  margin: 10px 10px;
+  margin: 20px 30px;
   padding: 5px 5px;
   width: 400px;
   height: 100%;
@@ -157,23 +151,23 @@
 
 /* Projects Card */
 .project__card {
-  display: grid;
-  /* grid-template-columns: repeat(3, minmax(270px, 1fr)); */
-  grid-gap: 100px;
-  right: 40px;
-  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+  gap: 160px;
+  margin: 20px 20px;
   padding: 10px 10px;
-  max-width: 70%;
+  max-width: 100%;
 }
-.project__card_items {
-  background-color: white;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.175);
+.project__card_items { 
+  width: 350px;
   display: flex;
   flex-direction: column;
   align-items: left;
   border-radius: 8px;
   margin-bottom: 20vh;
   border-top: 5px solid rgba(0, 250, 154, 0.486);
+  background-color: white;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.175);
 }
 .project__card_items img {
   border-radius: 4px;
