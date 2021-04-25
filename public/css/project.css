@@ -60,7 +60,6 @@
 }
 
 /* Profile Card */
-
 .project__profile_card {
   display: flex;
   flex-direction: row; 
@@ -68,12 +67,11 @@
   justify-content: space-evenly;
   background-color: rgb(252, 248, 252);
   border-radius: 8px;
+  border-left: 3px solid rgba(250, 0, 187, 0.589);
   margin: 20px 30px;
   padding: 5px 5px;
   width: 400px;
-  height: 100%;
-  /* box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.178); */
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.048);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.06);
 }
 
 .project__profile_card:hover {
@@ -152,25 +150,24 @@
 /* Projects Card */
 .project__card {
   display: flex;
-  justify-content: center;
-  gap: 160px;
+  justify-content: space-between;
+  flex-wrap: wrap;
   margin: 20px 20px;
   padding: 10px 10px;
   max-width: 100%;
 }
 .project__card_items { 
-  width: 350px;
+  width: 400px;
   display: flex;
   flex-direction: column;
   align-items: left;
   border-radius: 8px;
   margin-bottom: 20vh;
-  border-top: 5px solid rgba(0, 250, 154, 0.486);
   background-color: white;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.175);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.06);
 }
 .project__card_items img {
-  border-radius: 4px;
+  border-radius: 8px 8px 0px 0px;
   width: 100%;
   cursor: pointer;
   object-fit: stretch;
@@ -185,10 +182,12 @@
 }
 .project__details p {
   margin-top: 10px;
+  font-weight: 300;
 }
 .project__details .project__authors,
 .project__details .project__tech {
-  font-size: 14px;
+  font-weight: 300;
+  font-size: 12px;
 }
 
 .project__tags {

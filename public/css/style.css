@@ -16,10 +16,11 @@ body::-webkit-scrollbar {
   width: 0.5rem;
 }
 body::-webkit-scrollbar-track {
-  background-color: rgb(255, 255, 255);
+  /* background-color: rgb(255, 255, 255); */
+  background-color: whitesmoke;
 }
 body::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 250, 154, 0.486);
+  background-color: rgba(0, 250, 154, 0);
 }
 
 .main__main {
@@ -114,28 +115,28 @@ body::-webkit-scrollbar-thumb {
 .profile_card__stack {
   margin-bottom: 5px;
 }
-.profile_card__tools{
+.profile_card__tools {
   display: flex;
-  gap:10px;
+  gap: 10px;
   margin-top: 10px;
 }
-.profile-tools{
-font-size: 20px;
+.profile-tools {
+  font-size: 20px;
 }
-.fa-node-js{
-  color:#28a470
+.fa-node-js {
+  color: #28a470;
 }
-.fa-vuejs{
- color: #35ce8d;
+.fa-vuejs {
+  color: #35ce8d;
 }
-.fa-react{
-color:#0077b6
+.fa-react {
+  color: #0077b6;
 }
-.fa-linux{
- color: #ffc300
+.fa-linux {
+  color: #ffc300;
 }
-.fa-github{
-  color: #212529
+.fa-github {
+  color: #212529;
 }
 .main__profile-footer {
   display: flex;

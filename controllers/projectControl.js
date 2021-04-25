@@ -22,7 +22,10 @@ exports.getProjectPage = async (req, res, next) => {
   }
 };
 
-exports.get;
+// exports.getProject = async (req, res, next) => {
+//   cl.log(Project)
+//   const project  = Project.findOne()
+// };
 
 exports.addProject = async (req, res, next) => {
   // Add new Project
